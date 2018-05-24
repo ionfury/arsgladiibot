@@ -1,0 +1,23 @@
+{
+  "name": "arsgladiibot",
+  "version": "1.0.0",
+  "description": "This is a meme",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionfury/arsgladiibot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "thomas nowak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ionfury/arsgladiibot/issues"
+  },
+  "homepage": "https://github.com/ionfury/arsgladiibot#readme"
+}
