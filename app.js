@@ -7,13 +7,12 @@ Client.on('ready', () => {
 });
 
 Client.on('message', msg => {
-
-  if(msg.author.bot) return;
+  if(msg.author.bot) 
+    return;
   if(msg.content.toLowerCase().indexOf('poofy pants') !== 0) 
     return;
-  else {
-    msg.reply(`${msg.author.tag} BANNED!`);
-  }
+    
+  msg.reply(`BANNED!`);
 });
 
 Client.login(process.env.token);
