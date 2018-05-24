@@ -9,7 +9,7 @@ Client.on('ready', () => {
 Client.on('message', msg => {
   if(msg.author.bot) 
     return;
-  if(msg.content.toLowerCase().indexOf('poofy pants') !== 0) 
+  if(!msg.content.toLowerCase().includes('poofy pants')) 
     return;
     
   msg.reply(`BANNED!`);
