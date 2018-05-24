@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/ionfury/arsgladiibot/issues"
   },
-  "homepage": "https://github.com/ionfury/arsgladiibot#readme"
+  "homepage": "https://github.com/ionfury/arsgladiibot#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "discord.js": "^11.3.2"
+  }
 }
