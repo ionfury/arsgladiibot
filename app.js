@@ -1,6 +1,6 @@
 let Discord = require(`discord.js`);
 let Promise = require('bluebird');
-let Translate = require('google-translate-api');
+let translate = require('google-translate-api');
 let Client = new Discord.Client();
 
 Client.on('ready', () => {
