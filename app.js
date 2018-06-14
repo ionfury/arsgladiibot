@@ -24,6 +24,8 @@ Client.on('messageReactionAdd', (messageReaction, user) => {
   {
     translate(message.content, {to: 'en'})
       .then(res => {
+        if(res.from.language.iso === 'en')
+          return;
         message.channel.send(`\n(${res.from.language.iso}) \`${message.content}\`\n :flag_us:: \`${res.text}\``);
       })
       .catch(err => {
