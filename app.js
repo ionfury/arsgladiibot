@@ -23,8 +23,13 @@ Client.on('messageReactionAdd', (messageReaction, user) => {
 
   if(emoji.id === 'us')
   {
+    console.log('here')
+    console.log(message)
+    console.log(message.content)
     translate(message, {to: 'en'})
       .then(res => {
+        console.log('now')
+        
         message.reply(`(${res.from.language}) \`${message}\`\n :flag_us:: \`${res.text}\``);
       })
       .catch(err => {
