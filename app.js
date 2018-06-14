@@ -19,7 +19,7 @@ Client.on('message', msg => {
 Client.on('messageReactionAdd', (messageReaction, user) => {
   let emoji = messageReaction.emoji;
   let message = messageReaction.message;
-  console.log(emoji.identifier);
+  console.log(emoji.name);
 
   if(emoji.id == 1 /*:flag_us:*/)
   {
