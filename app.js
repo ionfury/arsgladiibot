@@ -19,6 +19,7 @@ Client.on('message', msg => {
 Client.on('messageReactionAdd', (messageReaction, user) => {
   let emoji = messageReaction.emoji;
   let message = messageReaction.message;
+  console.log(emoji.name);
   if(emoji.name === '🇺🇸')
   {
     translate(message.content, {to: 'en'})
