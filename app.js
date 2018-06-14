@@ -23,7 +23,7 @@ Client.on('messageReactionAdd', (messageReaction, user) => {
   {
     translate(message.content, {to: 'en'})
       .then(res => {
-        message.reply(`\n(${res.from.language}) \`${message.content}\`\n :flag_us:: \`${res.text}\``);
+        message.reply(`\n(${res.from.language.iso}) \`${message.content}\`\n :flag_us:: \`${res.text}\``);
       })
       .catch(err => {
         console.error(err);
