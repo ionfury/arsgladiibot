@@ -21,7 +21,8 @@ Client.on('messageReactionAdd', (messageReaction, user) => {
   let message = messageReaction.message;
   console.log(emoji.name);
 
-  if(emoji.id === 'us')
+  
+  if(emoji.name === 'us')
   {
     console.log('here')
     console.log(message)
