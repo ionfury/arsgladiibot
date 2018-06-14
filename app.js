@@ -21,15 +21,15 @@ Client.on('messageReactionAdd', (messageReaction, user) => {
   let message = messageReaction.message;
   console.log(emoji.name);
 
-  if(emoji.id == 1 /*:flag_us:*/)
+  if(emoji.id === 'flag_us')
   {
-    translate(messageReaction, {to: 'en'})
+    translate(message, {to: 'en'})
       .then(res => {
-        message.reply(res.text);
+        message.reply(`(${res.from.language}) \`${message}\`\n :flag_us:: \`${res.text}\``);
       })
       .catch(err => {
         console.error(err);
-      })
+      });
   }
 });
 
