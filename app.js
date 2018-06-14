@@ -18,20 +18,12 @@ Client.on('message', msg => {
 
 Client.on('messageReactionAdd', (messageReaction, user) => {
   let emoji = messageReaction.emoji;
-  let message = messageReaction.message;
-  console.log(emoji.name);
-
-
+  let message = messageReaction.message.content;
   if(emoji.name === '🇺🇸')
   {
-    console.log('here')
-    console.log(message)
-    console.log(message.content)
     translate(message, {to: 'en'})
       .then(res => {
-        console.log('now')
-        
-        message.reply(`(${res.from.language}) \`${message}\`\n :flag_us:: \`${res.text}\``);
+        message.reply(`\n(${res.from.language}) \`${message}\`\n :flag_us:: \`${res.text}\``);
       })
       .catch(err => {
         console.error(err);
