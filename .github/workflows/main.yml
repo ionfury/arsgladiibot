@@ -8,10 +8,10 @@ jobs:
     - uses: azure/container-actions/docker-login@master
       name: Publish to Registry
       with:
-        login-server: contoso.azurecr.io
+        login-server: ionfuryacr.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
 
     - run: |
-        docker build . -t contoso.azurecr.io/k8sdemo:${{ github.sha }}
-        docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
+        docker build . -t ionfuryacr.azurecr.io/arsgladiibot:${{ github.sha }}
+        docker push ionfuryacr.azurecr.io/arsgladiibot:${{ github.sha }}
